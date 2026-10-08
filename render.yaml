@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: upi-offline-mesh
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: SPRING_H2_CONSOLE_ENABLED
+        value: "false"
